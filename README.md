@@ -78,8 +78,3 @@ Add `'wagtailfontawesome'` to INSTALLED_APPS if it's not there already
 
 10. Open you.web.site/django-admin/ and got to Sites. Check if there everything is okay.
 
-## Now what
-
-When you successfully have installed wagtail_comments_xtd, you have to **carefully** read the documentation for
-django_comments_xtd to configure the frontend for the commenting system
-
