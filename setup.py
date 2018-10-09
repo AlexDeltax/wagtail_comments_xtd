@@ -21,7 +21,7 @@ setup(
     include_package_data=True,
     python_requires='>=3',
     install_requires=[
-        "wagtail>2.2.2",
+        "wagtail>2.2",
         "Django>=2.0.0",
         "wagtailfontawesome>=1.1.3",
         "django-comments-xtd>=2.2.1"
