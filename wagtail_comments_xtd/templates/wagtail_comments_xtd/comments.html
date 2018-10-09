@@ -1,5 +1,5 @@
-{% extends "wagtailcomments_xtd/layout.html" %}
-{% load wagtailcomments_xtd_tags %}
+{% extends "wagtail_comments_xtd/layout.html" %}
+{% load wagtail_comments_xtd_tags %}
 {% load wagtailadmin_tags %}
 {% load i18n %}
 
@@ -27,9 +27,9 @@
 				</td>
 			</tr>
 
-			{% include "wagtailcomments_xtd/comments/_table_headers_explore.html" %}
+			{% include "wagtail_comments_xtd/comments/_table_headers_explore.html" %}
 		</thead>
-		{% include "wagtailcomments_xtd/comments/_list_explore.html" with comments=comments %}
+		{% include "wagtail_comments_xtd/comments/_list_explore.html" with comments=comments %}
 	</table>
 
 {% endblock layout %}

@@ -10,7 +10,7 @@
 			<td class="title" valign="top" data-listing-page-title="">
 				<h2>
 					{% if element.has_child %}
-						<a href="{% url 'wagtailcomments_xtd_comment_thread' page.pk element.comment.pk %}" title="{% trans 'Explore this thread' %}">{{ element.comment.comment }}</a><br>
+						<a href="{% url 'wagtail_comments_xtd_comment_thread' page.pk element.comment.pk %}" title="{% trans 'Explore this thread' %}">{{ element.comment.comment }}</a><br>
 					{% else %}
 						{{ element.comment.comment }}<br>
 					{% endif %}
@@ -21,14 +21,14 @@
 						<li><a href="{{ page.url }}#c{{ element.comment.pk }}" class="button button-secondary button-small" target="blank">{% trans "View live" %}</a></li>
 					{% endif %}
 					{% if element.comment.is_public %}
-						<li><a href="{% url 'wagtailcomments_xtd_publication' page.pk element.comment.pk 'unpublish' %}" class="button button-secondary button-small" title="Click to make the comment effectively disappear from the site.">{% trans "Unpublish" %}</a></li>
+						<li><a href="{% url 'wagtail_comments_xtd_publication' page.pk element.comment.pk 'unpublish' %}" class="button button-secondary button-small" title="Click to make the comment effectively disappear from the site.">{% trans "Unpublish" %}</a></li>
 					{% else %}
-						<li><a href="{% url 'wagtailcomments_xtd_publication' page.pk element.comment.pk 'publish' %}" class="button button-secondary button-small" title="Click to display the comment">{% trans "Publish" %}</a></li>
+						<li><a href="{% url 'wagtail_comments_xtd_publication' page.pk element.comment.pk 'publish' %}" class="button button-secondary button-small" title="Click to display the comment">{% trans "Publish" %}</a></li>
 					{% endif %}
 					{% if element.comment.is_removed %}
-						<li><a href="{% url 'wagtailcomments_xtd_publication' page.pk element.comment.pk 'show' %}" class="button button-secondary button-small" title="Click to display the comment">{% trans "Show" %}</a></li>
+						<li><a href="{% url 'wagtail_comments_xtd_publication' page.pk element.comment.pk 'show' %}" class="button button-secondary button-small" title="Click to display the comment">{% trans "Show" %}</a></li>
 					{% else %}
-						<li><a href="{% url 'wagtailcomments_xtd_publication' page.pk element.comment.pk 'hide' %}" class="button button-secondary button-small" title="Click if the comment is inappropriate. A 'This comment has been removed' message will be displayed instead.">{% trans "Hide" %}</a></li>
+						<li><a href="{% url 'wagtail_comments_xtd_publication' page.pk element.comment.pk 'hide' %}" class="button button-secondary button-small" title="Click if the comment is inappropriate. A 'This comment has been removed' message will be displayed instead.">{% trans "Hide" %}</a></li>
 					{% endif %}
 				</ul>
 			</td>
@@ -46,7 +46,7 @@
 			</td>
 			{% if element.has_child %}
 				<td class="children">
-					<a href="{% url 'wagtailcomments_xtd_comment_thread' page.pk element.comment.pk %}" class="icon text-replace icon-arrow-right" title="{% trans 'Explore this thread' %}">{% trans "Explore" %}</a>
+					<a href="{% url 'wagtail_comments_xtd_comment_thread' page.pk element.comment.pk %}" class="icon text-replace icon-arrow-right" title="{% trans 'Explore this thread' %}">{% trans "Explore" %}</a>
 				</td>
 			{% else %}
 				<td></td>

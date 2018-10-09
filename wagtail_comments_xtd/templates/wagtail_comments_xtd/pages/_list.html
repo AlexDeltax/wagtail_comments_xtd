@@ -3,7 +3,7 @@
 {% if pages %}
 	<table class="listing full-width">
 		<thead>
-			{% include "wagtailcomments_xtd/pages/_table_headers_explore.html" %}
+			{% include "wagtail_comments_xtd/pages/_table_headers_explore.html" %}
 		</thead>
 		<tbody>
 			{% for page in pages %}
@@ -11,7 +11,7 @@
 					<td class="ord" style="width:10px"></td>
 					<td class="title" valign="top" data-listing-page-title>
 						<h2>
-							<a href="{% url 'wagtailcomments_xtd_comments' page.pk %}" title="{% trans 'Explore this page' %}">{{ page.model.title }}</a>
+							<a href="{% url 'wagtail_comments_xtd_comments' page.pk %}" title="{% trans 'Explore this page' %}">{{ page.model.title }}</a>
 						</h2>
 						<ul class="actions">
 							<li><a href="{% url 'wagtailadmin_pages:edit' page.pk %}" class="button button-secondary button-small">{% trans "Edit" %}</a></li>
@@ -29,7 +29,7 @@
 						{% endif %}
 					</td>
 					<td class="children">
-			            <a href="{% url 'wagtailcomments_xtd_comments' page.pk %}" class="icon text-replace icon-arrow-right" title="{% blocktrans with title=page.get_admin_display_title %}Explore this page{% endblocktrans %}">{% trans "Explore" %}</a>
+			            <a href="{% url 'wagtail_comments_xtd_comments' page.pk %}" class="icon text-replace icon-arrow-right" title="{% blocktrans with title=page.get_admin_display_title %}Explore this page{% endblocktrans %}">{% trans "Explore" %}</a>
 					</td>
 				</tr>
 			{% endfor %}
