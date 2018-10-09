@@ -2,11 +2,12 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='wagtailcomments_xtd',
-    author='Adrien Lachaize',
-    author_email='adrien.lachaize@gmail.com',
-    version='0.0.2',
-    url='https://github.com/adrihein/wagtailcomments_xtd',
+    name='wagtail_comments_xtd',
+    author='Alexander Smolenskyi',
+    license='GPLv3',
+    author_email='alexsmolenskyi@gmail.com',
+    version='1.0.0',
+    url='https://github.com/AlexDeltax/wagtail_comments_xtd',
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
@@ -17,10 +18,12 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
     packages=find_packages(),
+    include_package_data=True,
+    python_requires='>=3',
     install_requires=[
-        "wagtail>1.7",
-        "Django>=1.8.16",
-        "wagtailfontawesome>=1.0.2",
-        "django-comments-xtd>=1.6.3"
+        "wagtail>2.2.2",
+        "Django>=2.0.0",
+        "wagtailfontawesome>=1.1.3",
+        "django-comments-xtd>=2.2.1"
     ],
 )
