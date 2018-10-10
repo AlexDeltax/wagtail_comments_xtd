@@ -16,7 +16,7 @@ def register_admin_urls():
 def register_styleguide_menu_item():
     return MenuItem(
         _('Comments'),
-        reverse('wagtail_comments_xtd_pages'),
+        reverse('comments_wagtail_xtd_pages'),
         classnames='icon icon-fa-comments-o',
         order=1000
     )

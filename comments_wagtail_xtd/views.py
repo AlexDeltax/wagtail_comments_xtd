@@ -22,7 +22,7 @@ def pages(request):
                     'model': page})
         except:
             pass
-    return render(request, 'wagtail_comments_xtd/pages.html', {
+    return render(request, 'comments_wagtail_xtd/pages.html', {
         'pages': pages,
     })
 
@@ -31,7 +31,7 @@ def comments(request, pk):
     page = Page.objects.get(pk=pk)
     comments = XtdComment.objects.filter(object_pk=pk, level=False)
 
-    return render(request, 'wagtail_comments_xtd/comments.html', {
+    return render(request, 'comments_wagtail_xtd/comments.html', {
         'page': page,
         'comments': cleaned_tree(comments),
     })
@@ -41,7 +41,7 @@ def comment_thread(request, page_pk, comment_pk):
     page = Page.objects.get(pk=page_pk)
     comments = XtdComment.objects.filter(parent_id=comment_pk).exclude(pk=comment_pk)
 
-    return render(request, 'wagtail_comments_xtd/comments.html', {
+    return render(request, 'comments_wagtail_xtd/comments.html', {
         'page': page,
         'comment': XtdComment.objects.get(pk=comment_pk),
         'comments': cleaned_tree(comments),

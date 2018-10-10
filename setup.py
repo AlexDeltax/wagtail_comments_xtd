@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='wagtail_comments_xtd',
+    name='comments_wagtail_xtd',
     author='Alexander Smolenskyi',
     license='GPLv3',
     author_email='alexsmolenskyi@gmail.com',
