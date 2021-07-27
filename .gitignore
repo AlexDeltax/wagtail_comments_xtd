@@ -4,3 +4,4 @@ build/
 *.pypirc
 .DS_Store
 *.egg-info
+.idea/

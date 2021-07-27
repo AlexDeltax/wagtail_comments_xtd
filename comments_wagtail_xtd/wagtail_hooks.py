@@ -5,6 +5,7 @@ from . import urls
 from django.conf.urls import include, url
 from django.utils.translation import ugettext_lazy as _
 
+
 @hooks.register('register_admin_urls')
 def register_admin_urls():
     return [
