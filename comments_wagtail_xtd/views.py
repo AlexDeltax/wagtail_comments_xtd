@@ -1,11 +1,13 @@
 from django.contrib import messages
-
 from django.shortcuts import redirect, render
-from django_comments_xtd.models import XtdComment
+from django_comments_xtd import get_model as get_comment_model
 from django.utils.translation import ugettext as _
 from wagtail.core.models import Page
 
 from .utils import cleaned_tree
+
+
+XtdComment = get_comment_model()
 
 
 def pages(request):
