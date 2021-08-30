@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.pages, name='comments_wagtail_xtd_pages'),
+    url(r'^/latest/$', views.latest_comments, name='comments_wagtail_xtd_latest'),
     url(r'^(?P<pk>\d+)/$', views.comments, name='comments_wagtail_xtd_comments'),
     url(r'^(?P<page_pk>\d+)/comment/(?P<comment_pk>\d+)/thread/$',
         views.comment_thread, name='comments_wagtail_xtd_comment_thread'),
