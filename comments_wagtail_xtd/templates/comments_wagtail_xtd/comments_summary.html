@@ -1,0 +1,11 @@
+{% load i18n wagtailadmin_tags %}
+
+<li class="icon icon-fa-comments-o">
+    <a href="{% url 'comments_wagtail_xtd_latest' %}">
+    {% blocktrans count counter=total_comments with total_comments|intcomma as total %}
+        <span>{{ total }}</span> {{ sum_title }}
+    {% plural %}
+        <span>{{ total }}</span> {{ sum_title }}
+    {% endblocktrans %}
+    </a>
+</li>
