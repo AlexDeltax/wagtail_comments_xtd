@@ -2,14 +2,15 @@ from django.urls import reverse
 from wagtail.admin.menu import MenuItem
 from wagtail.core import hooks
 from . import urls
-from django.conf.urls import include, url
-from django.utils.translation import ugettext_lazy as _
+from django.urls import re_path
+from django.conf.urls import include
+from django.utils.translation import gettext_lazy as _
 
 
 @hooks.register('register_admin_urls')
 def register_admin_urls():
     return [
-        url(r'^comments/', include(urls)),
+        re_path(r'^comments/', include(urls)),
     ]
 
 
