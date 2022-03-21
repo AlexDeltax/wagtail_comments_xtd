@@ -31,11 +31,19 @@ def pages(request):
 
 def comments(request, pk):
     page = Page.objects.get(pk=pk)
-    comments = XtdComment.objects.filter(object_pk=pk, level=False)
+    comments_obj = XtdComment.objects.filter(object_pk=pk, level=False)
 
     return render(request, 'comments_wagtail_xtd/comments.html', {
         'page': page,
-        'comments': cleaned_tree(comments),
+        'comments': cleaned_tree(comments_obj),
+    })
+
+
+def latest_comments(request):
+    comments_obj = XtdComment.objects.filter(level=False).order_by('-submit_date')
+
+    return render(request, 'comments_wagtail_xtd/latest_comments.html', {
+        'comments': cleaned_tree(comments_obj),
     })
 
 

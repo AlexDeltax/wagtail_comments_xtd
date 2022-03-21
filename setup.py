@@ -6,7 +6,7 @@ setup(
     author='Alexander Smolenskyi',
     license='GPLv3',
     author_email='alexsmolenskyi@gmail.com',
-    version='1.0.3',
+    version='1.0.4',
     url='https://github.com/AlexDeltax/wagtail_comments_xtd',
     classifiers=[
         "Environment :: Web Environment",
@@ -19,11 +19,11 @@ setup(
     ],
     packages=find_packages(),
     include_package_data=True,
-    python_requires='>=3.8',
+    python_requires='>=3.9',
     install_requires=[
-        "wagtail>=2.13",
-        "Django>=3.2.0",
-        "wagtailfontawesome>=1.2.0",
-        "django-comments-xtd>=2.9.0"
+        "wagtail>=2.15.1",
+        "Django>=4.0.0",
+        "wagtailfontawesome>=1.2.1",
+        "django-comments-xtd>=2.9.5"
     ],
 )

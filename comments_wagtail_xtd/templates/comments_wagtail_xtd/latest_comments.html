@@ -1,0 +1,28 @@
+{% extends "comments_wagtail_xtd/layout.html" %}
+{% load comments_wagtail_xtd_tags %}
+{% load wagtailadmin_tags %}
+{% load i18n %}
+
+{% block layout %}
+
+	<table class="listing full-width">
+		<col width="50px" />
+		<col />
+		<col width="12%" />
+		<col width="12%" />
+		<col width="10%" />
+		<thead>
+			<tr class="index">
+				<td class="title" colspan="6">
+					<h2>
+						{% trans "Latest comments" %}
+					</h2>
+				</td>
+			</tr>
+
+			{% include "comments_wagtail_xtd/comments/_table_headers_explore.html" %}
+		</thead>
+		{% include "comments_wagtail_xtd/comments/_list_latest_explore.html" with comments=comments %}
+	</table>
+
+{% endblock layout %}
