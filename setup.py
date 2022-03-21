@@ -6,7 +6,7 @@ setup(
     author='Alexander Smolenskyi',
     license='GPLv3',
     author_email='alexsmolenskyi@gmail.com',
-    version='1.0.2',
+    version='1.0.3',
     url='https://github.com/AlexDeltax/wagtail_comments_xtd',
     classifiers=[
         "Environment :: Web Environment",
