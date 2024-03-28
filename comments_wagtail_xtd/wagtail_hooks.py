@@ -1,12 +1,12 @@
-from django.urls import reverse
 from wagtail.admin.menu import MenuItem
 from wagtail import hooks
 from wagtail.admin.site_summary import SummaryItem
-from . import urls
-from django.urls import re_path
+from django.urls import reverse, re_path
 from django.conf.urls import include
 from django.utils.translation import gettext_lazy as _
 from django_comments_xtd import get_model as get_comment_model
+
+from . import urls
 
 
 XtdComment = get_comment_model()
@@ -24,7 +24,7 @@ def register_styleguide_menu_item():
     return MenuItem(
         _("Comments"),
         reverse("comments_wagtail_xtd_pages"),
-        classnames="icon icon-fa-comments-o",
+        classnames="comment",
         order=1000,
     )
 

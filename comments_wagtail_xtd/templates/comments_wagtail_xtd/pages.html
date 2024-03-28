@@ -4,7 +4,7 @@
 {% block layout %}
 
 	{% trans "Comments" as title_trans %}
-	{% include "wagtailadmin/shared/header.html" with title=title_trans icon="fa-comments-o" merged=True %}
+	{% include "wagtailadmin/shared/header.html" with title=title_trans icon="comment" merged=True %}
 
 	{% include "comments_wagtail_xtd/pages/_list.html" with pages=pages %}
 

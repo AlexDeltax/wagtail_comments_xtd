@@ -23,7 +23,6 @@ setup(
     install_requires=[
         "wagtail>=6.0.0",
         "Django>=5.0.0",
-        "wagtailfontawesome>=1.2.1",
         "django-comments-xtd>=2.9.13"
     ],
 )
