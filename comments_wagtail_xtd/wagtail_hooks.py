@@ -33,12 +33,12 @@ class CommentsSummaryItem(SummaryItem):
     order = 400
     template_name = "comments_wagtail_xtd/comments_summary.html"
 
-    def get_context(self):
+    def get_context_data(self, parent_context):
         total_comments = XtdComment.objects.all().count()
-        return {
-            "sum_title": _("Comments"),
-            "total_comments": total_comments,
-        }
+        context = super().get_context_data(parent_context)
+        context["sum_title"] = _("Comments")
+        context["total_comments"] = total_comments
+        return context
 
 
 @hooks.register("construct_homepage_summary_items")
