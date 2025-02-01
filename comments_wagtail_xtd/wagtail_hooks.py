@@ -1,6 +1,6 @@
 from django.urls import reverse
 from wagtail.admin.menu import MenuItem
-from wagtail.core import hooks
+from wagtail import hooks
 from wagtail.admin.site_summary import SummaryItem
 from . import urls
 from django.urls import re_path

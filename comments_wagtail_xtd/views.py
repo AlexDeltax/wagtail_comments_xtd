@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import redirect, render
 from django_comments_xtd import get_model as get_comment_model
 from django.utils.translation import gettext as _
-from wagtail.core.models import Page
+from wagtail.models import Page
 
 from .utils import cleaned_tree
 
