@@ -31,7 +31,7 @@ def register_styleguide_menu_item():
 
 class CommentsSummaryItem(SummaryItem):
     order = 400
-    template = "comments_wagtail_xtd/comments_summary.html"
+    template_name = "comments_wagtail_xtd/comments_summary.html"
 
     def get_context(self):
         total_comments = XtdComment.objects.all().count()
